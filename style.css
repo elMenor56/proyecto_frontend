@@ -1,0 +1,1179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    padding-top: 80px;
+    background: linear-gradient(165deg, #034c74, #282e35);
+}
+
+/*HEADER*/
+header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0f2031;
+    padding: 0 54px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo h1{
+    font-size: 24px;
+    color: white;
+}
+
+.header-logo img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.header-content nav ul{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.header-content nav li{
+    list-style: none;
+}
+
+.header-content nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+}
+
+.header-content nav a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background-color: #ffffff; /* color de la línea */
+    transition: width 0.3s ease;
+}
+
+.header-content nav a:hover::after{
+    width: 100%;
+}
+
+.header-btn{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+/*HERO*/
+#hero{
+    width: 100%;
+    height: 85vh;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0) 100%),
+    url(/img/hero-imagen.jpg);
+    background-position: center;   /* centra la imagen */
+    background-repeat: no-repeat;  /* evita que se repita */
+    background-size: cover;        /* hace que la imagen rellene la sección */
+}
+/*
+rgba(0,0,0,0.8) 0% → negro más fuerte al inicio (lado izquierdo).
+rgba(0,0,0,0.4) 40% → va aclarándose.
+rgba(0,0,0,0) 100% → desaparece suavemente hacia la derecha.
+*/
+
+.hero-content{
+    width: 60%;
+    height: 100%;
+    padding: 0 54px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h2{
+    font-size: 64px;
+    font-weight: 700;
+    color: white;
+}
+
+.hero-content p{
+    font-size: 20px;
+    color: rgb(231, 231, 231);
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.hero-content button{
+    width: 154px;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4F46E5;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+}
+
+.hero-content button:hover{
+    background-color: #362e92;
+    transform: translateY(-5px);
+}
+
+.cursos-form{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.cursos-form input{
+    border: 1px solid #b1b1b1;
+    width: 550px;
+    height: 48px;
+    border-radius: 8px;
+    padding: 0 16px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.cursos-form input:focus{
+    border: 3px solid #16A34A;
+}
+
+.cursos-form button{
+    width: 148px;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background-color: #16A34A;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.cursos-form button:hover{
+    transform: scale(1.05);
+    background-color: #22C55E;
+}
+
+.undertexto{
+    font-size: 20px;
+    color: white;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.undertexto::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background-color: #ffffff; /* color de la línea */
+    transition: width 0.3s ease;
+}
+
+.undertexto:hover::after{
+    width: 100%;
+}
+
+/*CURSOS*/
+#cursos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 80px 50px 0 50px;
+}
+
+#cursos h2{
+    font-size: 48px;
+    color: white;
+    font-weight: 700;
+}
+
+.cursos-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding-top: 48px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cursos-texto{
+    text-align: center;
+    color: white;
+}
+
+.cursos-texto h3{
+    font-size: 40px;
+    font-weight: 700;
+    padding-bottom: 8px;
+}
+
+.cursos-texto p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.cursos-cards{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
+    justify-content: center;
+}
+
+/*==============================================*/
+
+/*CARDS*/
+
+/*CARD-TECNOLOGIA*/
+.curso-card-tecnologia{
+    position: relative; /* importante para que el overlay se ubique dentro */
+    overflow: hidden; /* oculta lo que sobresalga */
+    padding: 50px;
+    width: 85%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-image: linear-gradient(rgba(90, 90, 90, 0.4), rgba(90, 90, 90, 0.4)), /* capa oscura transparente */
+    url(/img/card-1-imagen.png);
+    background-position: center;  
+    background-repeat: no-repeat; 
+    background-size: cover;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+    color: white;
+}
+
+.curso-card-tecnologia:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    color: rgb(233, 233, 233);
+}
+
+.curso-card-tecnologia h4{
+    font-size: 48px;
+}
+
+.overlay-tecnologia {
+    position: absolute;
+    top: 0;
+    right: -100%; /* empieza oculto a la derecha */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transition: right 0.8s ease;
+}
+
+.overlay-tecnologia h5{
+    font-size: 40px;
+    margin-bottom: 6px;
+}
+
+.overlay-tecnologia p{
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.curso-card-tecnologia:hover .overlay-tecnologia {
+    right: 0; /* se desliza hacia dentro */
+}
+
+.overlay-tecnologia button{
+    width: 180px;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background-color: #16A34A;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.overlay-tecnologia button:hover{
+    background-color: #22C55E;
+}
+
+.overlay-tecnologia button:active{
+    transform: scale(0.85);
+}
+
+/*==============================================*/
+
+/*CARD-DESARROLLO*/
+.curso-card-desarrollo{
+    position: relative; /* importante para que el overlay se ubique dentro */
+    overflow: hidden; /* oculta lo que sobresalga */
+    padding: 50px;
+    width: 85%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-image: linear-gradient(rgba(90, 90, 90, 0.4), rgba(90, 90, 90, 0.4)), /* capa oscura transparente */
+    url(/img/card-2-imagen.png);
+    background-position: center;  
+    background-repeat: no-repeat; 
+    background-size: cover;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+    color: white;
+}
+
+.curso-card-desarrollo:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    color: rgb(233, 233, 233);
+}
+
+.curso-card-desarrollo h4{
+    font-size: 48px;
+    text-align: center;
+}
+
+.overlay-desarrollo {
+    position: absolute;
+    top: 0;
+    right: -100%; /* empieza oculto a la derecha */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transition: right 0.8s ease;
+}
+
+.overlay-desarrollo h5{
+    font-size: 40px;
+    margin-bottom: 6px;
+}
+
+.overlay-desarrollo p{
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.curso-card-desarrollo:hover .overlay-desarrollo {
+    right: 0; /* se desliza hacia dentro */
+}
+
+.overlay-desarrollo button{
+    width: 180px;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background-color: #16A34A;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.overlay-desarrollo button:hover{
+    background-color: #22C55E;
+}
+
+.overlay-desarrollo button:active{
+    transform: scale(0.85);
+}
+
+/*==============================================*/
+
+/*CARD-ARTE*/
+.curso-card-arte{
+    position: relative; /* importante para que el overlay se ubique dentro */
+    overflow: hidden; /* oculta lo que sobresalga */
+    padding: 50px;
+    width: 85%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-image: linear-gradient(rgba(90, 90, 90, 0.4), rgba(90, 90, 90, 0.4)), /* capa oscura transparente */
+    url(/img/card-3-imagen.png);
+    background-position: center;  
+    background-repeat: no-repeat; 
+    background-size: cover;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+    color: white;
+}
+
+.curso-card-arte:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    color: rgb(233, 233, 233);
+}
+
+.curso-card-arte h4{
+    font-size: 48px;
+    text-align: center;
+}
+
+.overlay-arte {
+    position: absolute;
+    top: 0;
+    right: -100%; /* empieza oculto a la derecha */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transition: right 0.8s ease;
+}
+
+.overlay-arte h5{
+    font-size: 40px;
+    margin-bottom: 6px;
+}
+
+.overlay-arte p{
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.curso-card-arte:hover .overlay-arte {
+    right: 0; /* se desliza hacia dentro */
+}
+
+.overlay-arte button{
+    width: 180px;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background-color: #16A34A;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.overlay-arte button:hover{
+    background-color: #22C55E;
+}
+
+.overlay-arte button:active{
+    transform: scale(0.85);
+}
+
+#stats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    padding: 80px 50px 0 50px;
+}
+
+.stats-texto{
+    text-align: center;
+    color: white;
+}
+
+.stats-texto h2{
+    font-size: 48px;
+    padding-bottom: 8px;
+    color: white;
+    font-weight: 700;
+}
+
+.stats-texto p{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.stats-cards-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.stats-card-2{
+    background: linear-gradient(135deg, #F59E0B, #EF4444);
+    width: 22%;
+    height: 350px;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: white;
+    text-align: center;
+}
+
+.stats-card-1{
+    background: linear-gradient(135deg, #16A34A, #3B82F6);
+    width: 22%;
+    height: 400px;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    color: white;
+    text-align: center;
+}
+
+.stats-card-1 h3{
+    font-size: 24px;
+}
+
+.stats-card-1 p{
+    font-size: 20px;
+}
+
+.stats-card-3{
+    background: linear-gradient(135deg, #8B5CF6, #EC4899);
+    width: 22%;
+    height: 350px;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: white;
+    text-align: center;
+}
+
+.stats-card-1 img{
+    width: 180px;
+    height: 180px;
+}
+
+.stats-card-2 img{
+    width: 150px;
+    height: 150px;
+}
+
+.stats-card-3 img{
+    width: 150px;
+    height: 150px;
+}
+
+.reviews {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.reviews h2 {
+    color: white;
+    font-size: 48px;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.review-card {
+    background: #5b7aac;
+    color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-card h4 {
+    font-size: 1.1em;
+    margin-top: 16px;
+}
+
+.review-card p{
+    margin-bottom: 16px;
+}
+
+.review-card span {
+    color: #FFD700; /* dorado para las estrellas */
+    font-size: 1em;
+}
+
+.divider {
+    border: 0;
+    width: 65%;
+    height: 1px;
+    background: rgba(255,255,255,0.7); /* línea semitransparente blanca */
+}
+
+footer{
+    background: linear-gradient(155deg, #0f2031, #2c2c5c);
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    padding: 24px 80px;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    border-top-left-radius: 95px;
+    border-top-right-radius: 95px;
+}
+
+.contactos{
+    text-align: left;
+    color: white;
+}
+
+.contactos h3{
+    margin-top: 16px;
+}
+
+.redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: white;
+}
+
+.redes img{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+}
+
+.redes-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+}
+
+.red{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*Modal*/
+.boton-login label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 148px;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background-color: #16A34A;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.boton-login label:hover{
+    transform: scale(1.05);
+    background-color: #22C55E;
+}
+
+#btn-login{
+    display: none;
+}
+
+/*FONDO OSCURO*/
+.container-login{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: rgba(31, 31, 31, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#btn-login:checked ~ .container-login{
+    display: flex;
+}
+
+.content-login{
+    display: flex;
+    width: 820px;
+    height: 475px;
+    box-sizing: border-box;
+}
+
+.content-login .btn-cerrar{
+    color: #22C55E;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.content-login .btn-cerrar:hover{
+    color: #16A34A;
+}
+
+.cerrar-login{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -1;
+}
+
+.panel-izquierdo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    gap: 16px;
+    padding: 50px;
+    width: 60%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), /* capa oscura transparente */
+    url(/img/fondo-login.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.panel-izquierdo h2{
+    font-size: 48px;
+}
+
+.panel-izquierdo p{
+    font-size: 16px;
+}
+
+.panel-derecho{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 35px;
+    background-color: white;
+}
+
+.panel-derecho h2{
+    font-size: 24px;
+    color: #0f2031;
+}
+
+.panel-derecho a{
+    font-size: 14px;
+    color: #0f2031;
+    text-decoration: none;
+}
+
+.registro-link{
+    font-size: 14px;
+    color: #0f2031;
+}
+
+.registro-link:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.panel-derecho a:hover{
+    text-decoration: underline;
+}
+
+.panel-derecho{
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.panel-derecho img{
+    width: 54px;
+    height: 54px;
+    object-fit: cover;
+}
+
+.login-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.login-form input{
+    height: 32px;
+    width: 100%;
+    border: 2px solid #b1b1b1;
+    border-radius: 6px;
+    padding: 16px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.login-form input:focus{
+    border: 2px solid #16A34A;
+}
+
+.login-form button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: #16A34A;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-form button:hover{
+    transform: scale(1.05);
+    background-color: #22C55E;
+}
+
+/*REGISTRO*/
+.boton-registro label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 148px;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    border: 2px solid #16A34A;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.boton-registro label:hover{
+    transform: scale(1.05);
+    background-color: #22C55E;
+    border: none;
+}
+
+#btn-registro{
+    display: none;
+}
+
+/*FONDO OSCURO*/
+.container-registro{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: rgba(31, 31, 31, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#btn-registro:checked ~ .container-registro{
+    display: flex;
+}
+
+.content-registro{
+    display: flex;
+    width: 820px;
+    height: 475px;
+    box-sizing: border-box;
+}
+
+.content-registro .btn-cerrar-registro{
+    color: #22C55E;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.content-registro .btn-cerrar-registro:hover{
+    color: #16A34A;
+}
+
+.cerrar-registro{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -1;
+}
+
+.panel-izquierdo-registro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    gap: 16px;
+    padding: 50px;
+    width: 60%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), /* capa oscura transparente */
+    url(/img/fondo-registro.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.checkbox-container{
+    display: flex;
+    gap: 24px;
+}
+
+.panel-izquierdo-registro h2{
+    font-size: 48px;
+}
+
+.panel-izquierdo-registro p{
+    font-size: 16px;
+}
+
+.panel-derecho-registro{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 35px;
+    background-color: white;
+}
+
+.panel-derecho-registro h2{
+    font-size: 24px;
+    color: #0f2031;
+}
+
+.panel-derecho-registro a{
+    font-size: 14px;
+    color: #0f2031;
+    text-decoration: none;
+}
+
+.panel-derecho-registro a:hover{
+    text-decoration: underline;
+}
+
+.panel-derecho-registro{
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.panel-derecho-registro img{
+    width: 54px;
+    height: 54px;
+    object-fit: cover;
+}
+
+.registro-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.registro-form input{
+    height: 32px;
+    width: 100%;
+    border: 2px solid #b1b1b1;
+    border-radius: 6px;
+    padding: 16px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.registro-form input:focus{
+    border: 2px solid #16A34A;
+}
+
+.registro-form button{
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: #16A34A;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.registro-form button:hover{
+    transform: scale(1.05);
+    background-color: #22C55E;
+}
+
+/* Ocultar el checkbox original */
+.checkbox-container input {
+    display: none;
+}
+
+.checkbox-container {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.checkbox-container span{
+    font-size: 12px;
+}
+
+/* Caja del checkbox falso */
+.checkmark {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+/* Hover */
+.checkbox-container:hover .checkmark {
+    background-color: #ccc;
+}
+
+/* Cuando está marcado */
+.checkbox-container input:checked + .checkmark {
+    background-color: #4CAF50;
+}
+
+/* El "✔" */
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked + .checkmark::after {
+    display: block;
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/*ANIMACION-DE-MODALES*/
+@keyframes slideDown {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.content-login,
+.content-registro {
+    pointer-events: auto; /* recibe clics */
+    animation: slideDown 0.5s ease forwards;
+}
+
+/* El overlay sí escucha */
+.container-login,
+.container-registro {
+    pointer-events: auto;
+}
+
+#btn-login:checked ~ .container-login .content-login {
+    animation: slideDown 0.5s ease forwards;
+}
+
+#btn-registro:checked ~ .container-registro .content-registro {
+    animation: slideDown 0.5s ease forwards;
+}

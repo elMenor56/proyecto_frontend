@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduNova | Inicio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@500;600;700&family=Sarala:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <div class="header-logo">
+            <img src="/img/logo.png" alt="logo">
+            <h1>EduNova</h1>
+        </div>
+
+        <div class="header-content">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="cursos.html">Cursos</a></li>
+                    <li><a href="precios.html">Precios</a></li>
+                    <li><a href="ayuda.html">Ayuda y Soporte</a></li>
+                </ul>
+            </nav>
+
+            <!--Botones Header-->
+            <div class="header-btn">
+                <!--Modal Login-->
+                <div class="boton-login">
+                    <label for="btn-login">Iniciar Sesión</label>
+                </div>
+
+                <input type="checkbox" id="btn-login">
+
+                <div class="container-login">
+                    <div class="content-login">
+                        <div class="panel-izquierdo">
+                            <h2>¡Bienvenido a EduNova!</h2>
+                            <p>Accede a tu cuenta o regístrate y comienza a transformar tu futuro con nuestros cursos.</p>
+                        </div>
+
+                        <div class="panel-derecho">
+                            <img src="/img/user-imagen.png" alt="user">
+                            <h2>Iniciar Sesión</h2>
+                            <form class="login-form">
+                                <input type="email" placeholder="Correo electrónico" required>
+                                <input type="password" placeholder="Contraseña" required>
+                                <a href="recuperar-contrasena.html">¿Olvidaste tu contraseña?</a>
+                                <label for="btn-registro" class="registro-link">Soy nuevo, quiero registrarme</label>
+                                <button type="submit">Entrar</button>
+                            </form>
+                            <div class="btn-cerrar">
+                                <label for="btn-login">Cancelar</label>
+                            </div>
+                        </div>
+                    </div>
+                    <label for="btn-login" class="cerrar-login"></label>
+                </div>
+
+                <!--Modal Registro-->
+                <div class="boton-registro">
+                    <label for="btn-registro">Registrate</label>
+                </div>
+
+                <input type="checkbox" id="btn-registro">
+
+                <div class="container-registro">
+                    <div class="content-registro">
+                        <div class="panel-izquierdo-registro">
+                            <h2>¡Crea tu cuenta en EduNova!</h2>
+                            <p>Regístrate gratis y accede a una comunidad de aprendizaje que impulsa tu crecimiento personal y profesional.</p>
+                        </div>
+
+                        <div class="panel-derecho-registro">
+                            <h2>Registrate</h2>
+                            <form class="registro-form">
+                                <input type="text" placeholder="Nombre completo" required>
+                                <input type="email" placeholder="Correo electrónico" required>
+                                <input type="password" placeholder="Contraseña" required>
+                                <input type="password" placeholder="Confirmar contraseña" required>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" required>
+                                    <span class="checkmark"></span>
+                                    <span>Acepto los términos y condiciónes</span>
+                                </label>
+                                <button type="submit">Registrarme</button>
+                            </form>
+                            <div class="btn-cerrar-registro">
+                                <label for="btn-registro">Volver</label>
+                            </div>
+                        </div>
+                    </div>
+                    <label for="btn-registro" class="cerrar-registro"></label>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+        <h2>Aprende hoy, transforma tu futuro</h2>
+        <p>En Edunova encuentras cursos modernos, prácticos y accesibles para crecer en tu carrera, tus proyectos y tu vida. Aprende a tu ritmo con recursos diseñados para jóvenes que buscan superarse.</p>
+        <button onclick="window.location.href='cursos.html'">Explorar Cursos</button>
+        </div>
+    </section>
+
+    <section id="cursos">
+        <h2>Encuentra el curso perfecto para ti</h2>
+        <form class="cursos-form">
+            <input type="search" placeholder="Busca por nombre o categoria">
+            <button onclick="window.location.href='cursos.html'">Buscar</button>
+        </form>
+        <a href="cursos.html" class="undertexto">Ver más &rarr;</a>
+
+        <div class="cursos-container">
+            <div class="cursos-texto">
+                <h3>Cursos recomendados</h3>
+                <p>Elige entre los que hemos preparado especialmente para impulsar tu crecimiento personal y profesional.</p>
+            </div>
+            
+            <div class="cursos-cards">
+                <div class="curso-card-tecnologia">
+                    <h4>Tecnología y programación</h4>
+
+                    <div class="overlay-tecnologia">
+                        <h5>Aprende habilidades digitales</h5>
+                        <p>Domina programación, desarrollo web, bases de datos y mucho más con nuestros cursos prácticos.</p>
+                        <button onclick="window.location.href='cursos.html'">Me interesa</button>
+                    </div>
+                </div>
+
+                <div class="curso-card-desarrollo">
+                    <h4>Desarrollo personal y habilidades blandas</h4>
+
+                    <div class="overlay-desarrollo">
+                        <h5>Desarrolla habilidades blandas</h5>
+                        <p>Mejora tu comunicación, liderazgo, trabajo en equipo y pensamiento crítico con nuestros cursos prácticos.</p>
+                        <button onclick="window.location.href='cursos.html'">Me interesa</button>
+                    </div>
+                </div>
+
+                <div class="curso-card-arte">
+                    <h4>Arte y creatividad</h4>
+
+                    <div class="overlay-arte">
+                        <h5>Explora tu lado artístico</h5>
+                        <p>Descubre técnicas de pintura, dibujo, diseño y creatividad para potenciar tu expresión artística con nuestros cursos prácticos.</p>
+                        <button onclick="window.location.href='cursos.html'">Me interesa</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats">
+        <div class="stats-texto">
+            <h2>Nuestros logros en cifras</h2>
+            <p>Conoce nuestro crecimiento y logros: estudiantes capacitados, cursos completados y proyectos exitosos que demuestran la efectividad de nuestra formación.</p>
+        </div>
+
+        <div class="stats-cards-content">
+            <div class="stats-card-2">
+                <img src="/img/stats-card-2.png" alt="stats-imagen">
+                <h3>Llevamos 75</h3>
+                <p>Cursos impartidos y agregaremos más en el futuro</p>
+            </div>
+
+            <div class="stats-card-1">
+                <img src="/img/stats-card-1.png" alt="stats-imagen">
+                <h3>Más de 1,200</h3>
+                <p>Estudiantes capacitados en el último año</p>
+            </div>
+
+            <div class="stats-card-3">
+                <img src="/img/stats-card-3.png" alt="stats-imagen">
+                <h3>Más de 300</h3>
+                <p>Proyectos completados en nuestro portafolio</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+    <h2>Reseñas de nuestros estudiantes</h2>
+    <div class="reviews-grid">
+        <div class="review-card">
+            <p>"Los cursos son prácticos y fáciles de seguir. ¡Aprendí mucho!"</p>
+            <hr class="divider">
+            <h4>Juan Pérez</h4>
+            <span>⭐⭐⭐⭐⭐</span>
+        </div>
+        <div class="review-card">
+            <p>"Excelente contenido y profesores muy atentos."</p>
+            <hr class="divider">
+            <h4>María Gómez</h4>
+            <span>⭐⭐⭐⭐⭐</span>
+        </div>
+        <div class="review-card">
+            <p>"Me encantó la forma de explicar los temas. Muy recomendable."</p>
+            <hr class="divider">
+            <h4>Carlos Rodríguez</h4>
+            <span>⭐⭐⭐⭐⭐</span>
+        </div>
+        <div class="review-card">
+            <p>"Aprendí más de lo que esperaba. Los ejercicios prácticos son geniales."</p>
+            <hr class="divider">
+            <h4>Ana López</h4>
+            <span>⭐⭐⭐⭐⭐</span>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="contactos">
+        <h2>Contactanos</h2>
+        <h3>Telefono</h3>
+        <p>311 234 5678</p>
+        <h3>Correo electrónico</h3>
+        <p>edunova2025@email.com</p>
+        <h3>Drección</h3>
+        <p>Calle 123 #45-67, Barrio Los Pinos, Bogotá, Colombia</p>
+    </div>
+
+    <div class="redes">
+        <h2>Nuestras redes sociales</h2>
+        <div class="redes-container">
+            <div class="red">
+                <img src="/img/facebook.png" alt="facebook">
+                <p>EduNova | Cursos para Todos</p>
+            </div>
+            <div class="red">
+                <img src="/img/instagram.png" alt="instagram">
+                <p>@edunovaescuelaofi</p>
+            </div>
+            <div class="red">
+                <img src="/img/linkedin.png" alt="linkedin">
+                <p>EduNova</p>
+            </div>
+        </div>
+    </div>
+
+    <p>Copyright &copy; EduNova. 2025</p>
+</footer>
+</body>
+</html>
