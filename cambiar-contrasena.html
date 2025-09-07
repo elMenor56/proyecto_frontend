@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recupera tu contraseña</title>
-    <link rel="stylesheet" href="recuperar-contrasena.css">
+    <title>Cambiar contraseña</title>
+    <link rel="stylesheet" href="cambiar-contrasena.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@500;600;700&family=Sarala:wght@400;700&display=swap" rel="stylesheet">
@@ -90,12 +90,13 @@
     </header>
 
     <div class="form-container">
-        <img src="/img/gmail-icono.png" alt="gmail-icono">
-        <h1>¿No recuerda su contraseña?</h1>
-        <p>Escribe el correo electrónico asociado a esta cuenta y te enviaremos un enlace para que recuperes el acceso.</p>
-        <form class="login-form" action="cambiar-contrasena.html" method="get">
-            <input type="email" placeholder="Correo electrónico" required>
-            <button>Enviar enlace</button>
+        <img src="/img/contrasena-icono.png" alt="">
+        <h1>Escribe tu nueva contraseña</h1>
+        <p>Debe ser segura y fácil de recordar.<br>Incluye al menos 8 caracteres, combinando letras, números y símbolos.</p>
+        <form action="index.html" method="get">
+            <input type="password" placeholder="Nueva contraseña" required>
+            <input type="password" placeholder="Confirma la contraseña" required>
+            <button type="submit">Guardar</button>
         </form>
         <a href="index.html">Volver a inicio</a>
     </div>
