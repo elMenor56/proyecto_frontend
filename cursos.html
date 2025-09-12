@@ -45,19 +45,19 @@
                         <div class="panel-derecho">
                             <img src="/img/user-imagen.png" alt="user">
                             <h2>Iniciar Sesión</h2>
-                            <form class="login-form">
+                            <form class="login-form" action="inicio-usuario.html" method="post">
                                 <input type="email" placeholder="Correo electrónico" required>
                                 <input type="password" placeholder="Contraseña" required>
                                 <a href="recuperar-contrasena.html">¿Olvidaste tu contraseña?</a>
-                                <a href="boton-registro">Soy nuevo, quiero registrarme</a>
+                                <label for="btn-registro" class="registro-link">Soy nuevo, quiero registrarme</label>
                                 <button type="submit">Entrar</button>
                             </form>
                             <div class="btn-cerrar">
                                 <label for="btn-login">Cancelar</label>
                             </div>
                         </div>
-                        <label for="btn-login" class="cerrar-login"></label>
                     </div>
+                    <label for="btn-login" class="cerrar-login"></label>
                 </div>
 
                 <!--Modal Registro-->
@@ -82,21 +82,159 @@
                                 <input type="password" placeholder="Contraseña" required>
                                 <input type="password" placeholder="Confirmar contraseña" required>
                                 <label class="checkbox-container">
-                                    <input type="checkbox">
+                                    <input type="checkbox" required>
                                     <span class="checkmark"></span>
-                                    <a href="#">Acepto los términos y condiciónes</a>
+                                    <span>Acepto los términos y condiciónes</span>
                                 </label>
                                 <button type="submit">Registrarme</button>
                             </form>
                             <div class="btn-cerrar-registro">
-                                <label for="btn-registro">Cancelar</label>
+                                <label for="btn-registro">Volver</label>
                             </div>
                         </div>
-                        <label for="btn-registro" class="cerrar-registro"></label>
                     </div>
+                    <label for="btn-registro" class="cerrar-registro"></label>
                 </div>
             </div>
         </div>
     </header>
+
+    <section id="hero">
+        <div class="hero-content">
+        <h2>Primer curso con 30% de descuento</h2>
+        <p>Invierte en tu futuro hoy y aprende desde cualquier lugar.</p>
+        <button onclick="window.location.href='precios.html'">Ver Precios</button>
+        </div>
+    </section>
+
+    <form class="cursos-buscador">
+        <input type="search" placeholder="Busca lo que quieres estudiar">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <section id="cursos-container">
+
+        <!--Filtro-->
+        <div class="cursos-filtros">
+            <form method="GET" action="/cursos">
+                <select name="categoria">
+                    <option value="">Categoria</option>
+                    <option value="tecnologia">Tecnología</option>
+                    <option value="negocios">Negocios</option>
+                    <option value="idiomas">Idiomas</option>
+                </select>
+
+                <select name="modalidad">
+                    <option value="">Modalidad</option>
+                    <option value="online">Online</option>
+                    <option value="presencial">Presencial</option>
+                </select>
+
+                <button type="submit">Filtrar</button>
+            </form>
+        </div>
+
+        <!--Cartas-->
+        <div class="cursos-cards">
+            <div class="card-curso">
+                <div class="card-texto">
+                    <h2>Desarrollo web (HTML, CSS, JavaScript)</h2>
+                    <p>Aprende a crear sitios modernos y responsivos desde cero.</p>
+                </div>
+                
+                <div class="btn-card">
+                    <a href="curso-adso.html">Inscribirme</a>
+                </div>
+            </div>
+
+            <div class="card-curso">
+                <div class="card-texto">
+                    <h2>Ciberseguridad</h2>
+                    <p>Protege sistemas y datos frente a amenazas digitales.</p>
+                </div>
+                
+                <div class="btn-card">
+                    <a href="curso-ciberseguridad.html">Inscribirme</a>
+                </div>
+            </div>
+
+            <div class="card-curso">
+                <div class="card-texto">
+                    <h2>Inteligencia Artificial y Machine Learning</h2>
+                    <p>Construye modelos inteligentes que aprenden de la información.</p>
+                </div>
+                
+                <div class="btn-card">
+                    <a href="curso-ia.html">Inscribirme</a>
+                </div>
+            </div>
+
+            <div class="card-curso">
+                <div class="card-texto">
+                    <h2>Marketing digital</h2>
+                    <p>Diseña estrategias para destacar tu marca en redes y buscadores.</p>
+                </div>
+                
+                <div class="btn-card">
+                    <a href="#">Inscribirme</a>
+                </div>
+            </div>
+
+            <div class="card-curso">
+                <div class="card-texto">
+                    <h2>Inglés (niveles A1 a C1)</h2>
+                    <p>Mejora tu nivel de inglés con un enfoque práctico.</p>
+                </div>
+                
+                <div class="btn-card">
+                    <a href="#">Inscribirme</a>
+                </div>
+            </div>
+
+            <div class="card-curso">
+                <div class="card-texto">
+                    <h2>Diseño gráfico</h2>
+                    <p>Explora herramientas y técnicas para crear piezas visuales impactantes.</p>
+                </div>
+                
+                <div class="btn-card">
+                    <a href="#">Inscribirme</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+<footer>
+    <div class="contactos">
+        <h2>Contactanos</h2>
+        <h3>Telefono</h3>
+        <p>311 234 5678</p>
+        <h3>Correo electrónico</h3>
+        <p>edunova2025@email.com</p>
+        <h3>Drección</h3>
+        <p>Calle 123 #45-67, Barrio Los Pinos, Bogotá, Colombia</p>
+    </div>
+
+    <div class="redes">
+        <h2>Nuestras redes sociales</h2>
+        <div class="redes-container">
+            <div class="red">
+                <img src="/img/facebook.png" alt="facebook">
+                <p>EduNova | Cursos para Todos</p>
+            </div>
+            <div class="red">
+                <img src="/img/instagram.png" alt="instagram">
+                <p>@edunovaescuelaofi</p>
+            </div>
+            <div class="red">
+                <img src="/img/linkedin.png" alt="linkedin">
+                <p>EduNova</p>
+            </div>
+        </div>
+    </div>
+
+    <p>Copyright &copy; EduNova. 2025</p>
+</footer>
 </body>
 </html>

@@ -88,6 +88,66 @@ header{
     align-items: center;
 }
 
+/*HERO*/
+#hero{
+    width: 100%;
+    height: 85vh;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0) 100%),
+    url(/img/hero-cursos.png);
+    background-position: center;   /* centra la imagen */
+    background-repeat: no-repeat;  /* evita que se repita */
+    background-size: cover;        /* hace que la imagen rellene la sección */
+}
+/*
+rgba(0,0,0,0.8) 0% → negro más fuerte al inicio (lado izquierdo).
+rgba(0,0,0,0.4) 40% → va aclarándose.
+rgba(0,0,0,0) 100% → desaparece suavemente hacia la derecha.
+*/
+
+.hero-content{
+    width: 60%;
+    height: 100%;
+    padding: 0 54px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.hero-content h2{
+    font-size: 64px;
+    font-weight: 700;
+    color: white;
+}
+
+.hero-content p{
+    font-size: 32px;
+    color: rgb(231, 231, 231);
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.hero-content button{
+    width: 154px;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4F46E5;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: center;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+}
+
+.hero-content button:hover{
+    background-color: #362e92;
+    transform: translateY(-5px);
+}
+
 /*Modal*/
 .boton-login label{
     display: flex;
@@ -201,6 +261,16 @@ header{
     font-size: 14px;
     color: #0f2031;
     text-decoration: none;
+}
+
+.registro-link{
+    font-size: 14px;
+    color: #0f2031;
+}
+
+.registro-link:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .panel-derecho a:hover{
@@ -448,7 +518,7 @@ header{
     align-items: center;
 }
 
-.checkbox-container p{
+.checkbox-container span{
     font-size: 12px;
 }
 
@@ -491,4 +561,215 @@ header{
     border: solid white;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
+}
+
+/*ANIMACION-DE-MODALES*/
+@keyframes slideDown {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.content-login,
+.content-registro {
+    pointer-events: auto; /* recibe clics */
+    animation: slideDown 0.5s ease forwards;
+}
+
+/* El overlay sí escucha */
+.container-login,
+.container-registro {
+    pointer-events: auto;
+}
+
+#btn-login:checked ~ .container-login .content-login {
+    animation: slideDown 0.5s ease forwards;
+}
+
+#btn-registro:checked ~ .container-registro .content-registro {
+    animation: slideDown 0.5s ease forwards;
+}
+
+/*BUSCADOR*/
+.cursos-buscador{
+    margin: 64px 0 40px 0;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.cursos-buscador input{
+    border: 1px solid #b1b1b1;
+    width: 550px;
+    height: 48px;
+    border-radius: 8px;
+    padding: 0 16px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.cursos-buscador input:focus{
+    border: 3px solid #16A34A;
+}
+
+.cursos-buscador button{
+    width: 148px;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background-color: #16A34A;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.cursos-buscador button:hover{
+    transform: scale(1.05);
+    background-color: #22C55E;
+}
+
+/*FILTRO*/
+#cursos-container{
+    display: flex;
+    flex-direction: column;
+    padding: 0 80px 80px 80px;
+}
+
+.cursos-filtros{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.cursos-filtros form{
+    display: flex;
+    gap: 24px;
+}
+
+.cursos-filtros select{
+    border-radius: 8px;
+    padding: 8px;
+    height: 48px;
+    width: 148px;
+}
+
+.cursos-filtros button{
+    width: 148px;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background-color: #16A34A;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.cursos-filtros button:hover{
+    transform: scale(1.05);
+    background-color: #22C55E;
+}
+
+.cursos-cards{
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+
+.card-curso{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(120deg, #2e7d32, #66bb6a, #d4e157);
+    width: 100%;
+    height: 210px;
+    color: white;
+    padding: 32px;
+    border-radius: 16px;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+}
+
+.card-curso:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.card-curso h2{
+    margin-bottom: 8px;
+    font-size: 32px;
+}
+
+.card-curso p{
+    font-size: 20px;
+}
+
+.card-curso a{
+    text-decoration: none;
+    color: white;
+}
+
+/*FOOTER*/
+footer{
+    background: linear-gradient(155deg, #0f2031, #2c2c5c);
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    padding: 24px 80px;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    border-top-left-radius: 95px;
+    border-top-right-radius: 95px;
+}
+
+.contactos{
+    text-align: left;
+    color: white;
+}
+
+.contactos h3{
+    margin-top: 16px;
+}
+
+.redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: white;
+}
+
+.redes img{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+}
+
+.redes-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+}
+
+.red{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-around;
 }
