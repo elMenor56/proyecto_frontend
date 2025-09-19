@@ -88,66 +88,6 @@ header{
     align-items: center;
 }
 
-/*HERO*/
-#hero{
-    width: 100%;
-    height: 85vh;
-    background-image: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0) 100%),
-    url(/img/hero-cursos.png);
-    background-position: center;   /* centra la imagen */
-    background-repeat: no-repeat;  /* evita que se repita */
-    background-size: cover;        /* hace que la imagen rellene la sección */
-}
-/*
-rgba(0,0,0,0.8) 0% → negro más fuerte al inicio (lado izquierdo).
-rgba(0,0,0,0.4) 40% → va aclarándose.
-rgba(0,0,0,0) 100% → desaparece suavemente hacia la derecha.
-*/
-
-.hero-content{
-    width: 60%;
-    height: 100%;
-    padding: 0 54px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.hero-content h2{
-    font-size: 64px;
-    font-weight: 700;
-    color: white;
-}
-
-.hero-content p{
-    font-size: 32px;
-    color: rgb(231, 231, 231);
-    margin-bottom: 24px;
-    font-weight: 500;
-}
-
-.hero-content button{
-    width: 154px;
-    height: 48px;
-    border: none;
-    border-radius: 8px;
-    background-color: #4F46E5;
-    color: white;
-    font-weight: 700;
-    font-size: 16px;
-    cursor: pointer;
-    align-self: center;
-    transition: all 0.3s ease-in-out;
-    transform: translateY(0);
-}
-
-.hero-content button:hover{
-    background-color: #362e92;
-    transform: translateY(-5px);
-}
-
 /*Modal*/
 .boton-login label{
     display: flex;
@@ -595,6 +535,7 @@ rgba(0,0,0,0) 100% → desaparece suavemente hacia la derecha.
     animation: slideDown 0.5s ease forwards;
 }
 
+/*=====================================================================================================*/
 /*BUSCADOR*/
 .cursos-buscador{
     margin: 64px 0 40px 0;
@@ -681,47 +622,7 @@ rgba(0,0,0,0) 100% → desaparece suavemente hacia la derecha.
     background-color: #22C55E;
 }
 
-.cursos-cards{
-    margin-top: 64px;
-    display: flex;
-    flex-direction: column;
-    gap: 72px;
-}
-
-.card-curso{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: linear-gradient(120deg, #2e7d32, #66bb6a, #d4e157);
-    width: 100%;
-    height: 210px;
-    color: white;
-    padding: 32px;
-    border-radius: 16px;
-    transition: all 0.3s ease-in-out;
-    transform: translateY(0);
-}
-
-.card-curso:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-}
-
-.card-curso h2{
-    margin-bottom: 8px;
-    font-size: 32px;
-}
-
-.card-curso p{
-    font-size: 20px;
-}
-
-.card-curso a{
-    text-decoration: none;
-    color: white;
-}
-
-/*FOOTER*/
+/*========================================FOOTER========================================*/
 footer{
     background: linear-gradient(155deg, #0f2031, #2c2c5c);
     display: flex;

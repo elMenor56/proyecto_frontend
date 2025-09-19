@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripcion a Tecnología y programación</title>
+    <link rel="stylesheet" href="inscripcion-habilidades.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@500;600;700&family=Sarala:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            <img src="/img/logo.png" alt="logo">
+            <h1>EduNova</h1>
+        </div>
+
+        <div class="header-content">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="cursos.html">Cursos</a></li>
+                    <li><a href="precios.html">Precios</a></li>
+                    <li><a href="ayuda.html">Ayuda y Soporte</a></li>
+                </ul>
+            </nav>
+
+            <!--Botones Header-->
+            <div class="header-btn">
+                <!--Modal Login-->
+                <div class="boton-login">
+                    <label for="btn-login">Iniciar Sesión</label>
+                </div>
+
+                <input type="checkbox" id="btn-login">
+
+                <div class="container-login">
+                    <div class="content-login">
+                        <div class="panel-izquierdo">
+                            <h2>¡Bienvenido a EduNova!</h2>
+                            <p>Accede a tu cuenta o regístrate y comienza a transformar tu futuro con nuestros cursos.</p>
+                        </div>
+
+                        <div class="panel-derecho">
+                            <img src="/img/user-imagen.png" alt="user">
+                            <h2>Iniciar Sesión</h2>
+                            <form class="login-form" action="inicio-usuario.html" method="post">
+                                <input type="email" placeholder="Correo electrónico" required>
+                                <input type="password" placeholder="Contraseña" required>
+                                <a href="recuperar-contrasena.html">¿Olvidaste tu contraseña?</a>
+                                <label for="btn-registro" class="registro-link">Soy nuevo, quiero registrarme</label>
+                                <button type="submit">Entrar</button>
+                            </form>
+                            <div class="btn-cerrar">
+                                <label for="btn-login">Cancelar</label>
+                            </div>
+                        </div>
+                    </div>
+                    <label for="btn-login" class="cerrar-login"></label>
+                </div>
+
+                <!--Modal Registro-->
+                <div class="boton-registro">
+                    <label for="btn-registro">Registrate</label>
+                </div>
+
+                <input type="checkbox" id="btn-registro">
+
+                <div class="container-registro">
+                    <div class="content-registro">
+                        <div class="panel-izquierdo-registro">
+                            <h2>¡Crea tu cuenta en EduNova!</h2>
+                            <p>Regístrate gratis y accede a una comunidad de aprendizaje que impulsa tu crecimiento personal y profesional.</p>
+                        </div>
+
+                        <div class="panel-derecho-registro">
+                            <h2>Registrate</h2>
+                            <form class="registro-form">
+                                <input type="text" placeholder="Nombre completo" required>
+                                <input type="email" placeholder="Correo electrónico" required>
+                                <input type="password" placeholder="Contraseña" required>
+                                <input type="password" placeholder="Confirmar contraseña" required>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" required>
+                                    <span class="checkmark"></span>
+                                    <span>Acepto los términos y condiciónes</span>
+                                </label>
+                                <button type="submit">Registrarme</button>
+                            </form>
+                            <div class="btn-cerrar-registro">
+                                <label for="btn-registro">Volver</label>
+                            </div>
+                        </div>
+                    </div>
+                    <label for="btn-registro" class="cerrar-registro"></label>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="inscripcion-container">
+        <div class="inscripcion-texto">
+            <h2>Desarrolllo personal y<br>Habilidades blandas</h2>
+            <p>Modalidad: Presencial<br>Fecha de inicio: 19 de Septiembre 2025<br>Precio: $180.000 COP<br>(Con talleres interactivos y acompañamiento en grupo)</p>
+        </div>
+        
+        <!--Boton-inscripcion-->
+        <div class="boton-inscripcion">
+            <label for="btn-inscripcion">Inscribirme</label>
+        </div>
+
+        <input type="checkbox" id="btn-inscripcion">
+
+        <div class="container-inscripcion">
+            <div class="content-inscripcion">
+                <h2>¡Estás a un paso de comenzar tu aprendizaje!</h2>
+                <p>El curso "Desarrollo personal y Habilidades blandas" está listo para ti. <br>¿Confirmas tu inscripción ahora mismo?</p>
+                <button type="submit">Sí, inscribirme</button>
+                <div class="btn-cerrar">
+                    <label for="btn-inscripcion">Cancelar</label>
+                </div>
+            </div>
+            <label for="btn-inscripcion" class="cerrar-inscripcion"></label>
+        </div>
+    </section>
+
+    <section class="requisitos-container">
+        <div class="requisitos-lista">
+            <h2>Requisitos para inscribirte:</h2>
+            <ul>
+                <li>Edad mínima recomendada: 15 años.</li>
+                <li>Tiempo disponible de al menos 5 horas semanales.</li>
+                <li>Disposición para realizar proyectos prácticos.</li>
+                <li>Tener conocimientos básicos de manejo de computadora e internet.</li>
+                <li>Contar con un computador o portátil con conexión a internet estable.</li>
+                <li>Ganas de aprender y dedicación para completar las actividades.</li>
+            </ul>
+        </div>
+        
+        <div class="requisitos-mascota">
+            <img src="/img/habilidades-mascota.png" alt="personaje">
+        </div>
+    </section>
+
+    <section class="resultados">
+        <h2>Resultados de Aprendizaje</h2>
+        <div class="resultados-grid">
+            <div class="resultado-card">
+                <span>✅</span>
+                <p>Manejar las emociones.</p>
+            </div>
+            <div class="resultado-card">
+                <span>✅</span>
+                <p>Mejorar la comunicación.</p>
+            </div>
+            <div class="resultado-card">
+                <span>✅</span>
+                <p>Aprender a trabajar en equipo.</p>
+            </div>
+            <div class="resultado-card">
+                <span>✅</span>
+                <p>Resolver conflictos de forma positiva.</p>
+            </div>
+            <div class="resultado-card">
+                <span>✅</span>
+                <p>Desarrollar liderazgo con empatía.</p>
+            </div>
+        </div>
+    </section>
+
+<footer>
+    <div class="contactos">
+        <h2>Contactanos</h2>
+        <h3>Telefono</h3>
+        <p>311 234 5678</p>
+        <h3>Correo electrónico</h3>
+        <p>edunova2025@email.com</p>
+        <h3>Drección</h3>
+        <p>Calle 123 #45-67, Barrio Los Pinos, Bogotá, Colombia</p>
+    </div>
+
+    <div class="redes">
+        <h2>Nuestras redes sociales</h2>
+        <div class="redes-container">
+            <div class="red">
+                <img src="/img/facebook.png" alt="facebook">
+                <p>EduNova | Cursos para Todos</p>
+            </div>
+            <div class="red">
+                <img src="/img/instagram.png" alt="instagram">
+                <p>@edunovaescuelaofi</p>
+            </div>
+            <div class="red">
+                <img src="/img/linkedin.png" alt="linkedin">
+                <p>EduNova</p>
+            </div>
+        </div>
+    </div>
+
+    <p>Copyright &copy; EduNova. 2025</p>
+</footer>
+</body>
+</html>
